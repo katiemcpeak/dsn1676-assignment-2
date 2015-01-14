@@ -1,0 +1,101 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  background-color: black;
+
+  font: normal 100%/1.5 sans-serif;
+  color: #fff;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.clock-face {
+  background-image: url("../img/clock-face.svg");
+  height: 300px;
+  width: 300px;
+  position: relative;
+  margin: 0 auto 0;
+  
+}
+
+.hand {
+  width: 14px;
+  position: absolute;
+  left: 140px;
+  bottom: 50%;
+  transition: all 6s linear;
+  transform-origin: bottom center;
+
+}
+
+.center {
+  position: relative;
+  width: 28px;
+  left: 135px;
+  top: 135px;
+}
+
+.clock-face:target .hand-hour {
+    transform: rotate(360deg)
+}
+
+.clock-face:target .hand-minute {
+    transform: rotate(4320deg)
+}
+
+.buttonforward {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    display: inline-block;
+    width: 7em;
+    line-height: 7em;
+    text-align: center;
+    margin-right: 2em;
+    transition: all 0.2s linear;
+}
+
+.buttonbackward {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 7em;
+    line-height: 7em;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+.buttons {
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+}
+
+.buttonbackward:hover {
+    opacity: 1;
+    background-color: #fff;
+    color: black;
+}
+
+.buttonforward:hover {
+    opacity: 1;
+    background-color: #fff;
+    color: black;
+}
+    
